@@ -1,0 +1,14 @@
+body{
+	@include gradient-striped(rgba(0,0,0,.15), 45deg);
+	@extend .font-family-default;
+	@extend .bg-default;
+	@extend .text-black;
+}
+code{
+	@extend .font-family-default;
+	@extend .bg-primary;
+	@extend .padding-1x;
+	@extend .font-size-default;
+	@extend .text-white;
+	
+}
