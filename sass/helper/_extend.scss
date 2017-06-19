@@ -1,6 +1,42 @@
 /********************************************************
 ********************************************************/
 
+.margin-1x{
+	margin: $padding-default;
+}
+.margin-top-1x{
+	margin-top: $padding-default;
+}
+.margin-right-1x{
+	margin-right: $padding-default;
+}
+.margin-bottom-1x{
+	margin-bottom: $padding-default;
+}
+.margin-left-1x{
+	margin-left: $padding-default;
+}
+
+//-------------------------------------------------------
+
+.margin-2x{
+	margin: 2*($padding-default);
+}
+.margin-top-2x{
+	margin-top: 2*($padding-default);
+}
+.margin-right-2x{
+	margin-right: 2*($padding-default);
+}
+.margin-bottom-2x{
+	margin-bottom: 2*($padding-default);
+}
+.margin-left-2x{
+	margin-left: 2*($padding-default);
+}
+
+//-------------------------------------------------------
+
 .margin-none{
 	margin: 0;
 }
@@ -19,26 +55,9 @@
 
 /********************************************************
 ********************************************************/
+
 /********************************************************
 ********************************************************/
-
-.padding-none{
-	padding: 0;
-}
-.padding-top-none{
-	padding-top: 0;
-}
-.padding-right-none{
-	padding-right: 0;
-}
-.padding-bottom-none{
-	padding-bottom: 0;
-}
-.padding-left-none{
-	padding-left: 0;
-}
-
-//-------------------------------------------------------
 
 .padding-1x{
 	padding: $padding-default;
@@ -55,6 +74,7 @@
 .padding-left-1x{
 	padding-left: $padding-default;
 }
+
 //-------------------------------------------------------
 
 .padding-2x{
@@ -71,6 +91,24 @@
 }
 .padding-left-2x{
 	padding-left: 2*($padding-default);
+}
+
+//-------------------------------------------------------
+
+.padding-none{
+	padding: 0;
+}
+.padding-top-none{
+	padding-top: 0;
+}
+.padding-right-none{
+	padding-right: 0;
+}
+.padding-bottom-none{
+	padding-bottom: 0;
+}
+.padding-left-none{
+	padding-left: 0;
 }
 
 
@@ -198,4 +236,13 @@
 }
 .flex{
 	display: flex;
+}
+
+/********************************************************
+********************************************************/
+
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
