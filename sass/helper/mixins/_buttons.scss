@@ -2,12 +2,15 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-@mixin button-variant($color:#fff, $background:#ccc, $border:#222) {
+@mixin button-variant($color:#000, $background:$gray-lighter, $border:$gray-lighter) {
     color: $color;
     background-color: $background;
     border-color: $border;
     padding: 5px 15px;
     border-radius: 3px;
+    border: 1px solid ;
+    cursor: pointer;
+    outline: none;
     &:focus,
     &.focus {
         color: $color;
@@ -18,6 +21,7 @@
         color: $color;
         background-color: darken($background, 10%);
         border-color: darken($border, 12%);
+        border: 1px solid ;
     }
     &:active,
     &.active,
@@ -52,6 +56,16 @@
         color: $background;
         background-color: $color;
     }
+}
+// Mixin to create a button with custom colors
+@mixin button-colors($background) {
+  $color: #fff;
+  $border: 5%;
+  @if (lightness($background) >= lightness(#aaa)) {
+    $color: #333;
+    $border: .2 * lightness($background);
+  }
+  @include button-variant($color, $background, darken($background, $border));
 }
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
