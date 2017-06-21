@@ -2,42 +2,65 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-@mixin button-variant($color:#000, $background:$gray-lighter, $border:$gray-lighter) {
-    color: $color;
-    background-color: $background;
-    border-color: $border;
+@mixin button-variant($color:$clr-black, $background:$gray-lighter, $border:$gray-lighter, $radius:3px) {
     padding: 5px 15px;
-    border-radius: 3px;
-    border: 1px solid ;
+    border-radius: $radius;
     cursor: pointer;
     outline: none;
-    &:focus,
+    text-decoration: none;
+    background: $background;
+    color: $color;
+    display: inline-block;
+    vertical-align: bottom;
+}
+// Mixin to create a button with custom colors
+@mixin button-colors($background, $color: $clr-white) {
+    $border: 5%;
+    border: 1px solid;
+    background: $background;
+    color: $color;
+    position: relative;
+    overflow: hidden;
+    @if (lightness($background) >=lightness(#aaa)) {
+        $color: #333;
+        border: 1px solid;
+        $border: .2 * lightness($background);
+    }
+    border-color: darken($background, 10%);
+//    &:focus,
     &.focus {
         color: $color;
         background-color: darken($background, 10%);
-        border-color: darken($border, 25%);
+        border-color: darken($background, 25%);
     }
     &:hover {
         color: $color;
         background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
-        border: 1px solid ;
+        border: 1px solid;
+        border-color: darken($background, 19%);
     }
     &:active,
     &.active,
     .open > &.dropdown-toggle {
         color: $color;
         background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
+        border: 1px solid;
+        border-color: darken($background, 12%);
         &:hover,
-        &:focus,
+//        &:focus,
         &.focus {
             color: $color;
             background-color: darken($background, 17%);
-            border-color: darken($border, 25%);
+            border: 1px solid;
+            border-color: darken($background, 25%);
         }
     }
-    &:active,
+    & .btn-bubble{
+        &:active{
+            background-color: darken($background, 100%);
+        }
+    }
+//    &:active,
     &.active,
     .open > &.dropdown-toggle {
         background-image: none;
@@ -46,29 +69,67 @@
     &[disabled],
     fieldset[disabled] & {
         &:hover,
-        &:focus,
+//        &:focus,
         &.focus {
             background-color: $background;
-            border-color: $border;
+            border: 1px solid;
+            border-color: $background;
         }
     }
     .badge {
         color: $background;
         background-color: $color;
     }
-}
-// Mixin to create a button with custom colors
-@mixin button-colors($background) {
-  $color: #fff;
-  $border: 5%;
-  @if (lightness($background) >= lightness(#aaa)) {
-    $color: #333;
-    $border: .2 * lightness($background);
-  }
-  @include button-variant($color, $background, darken($background, $border));
+    //bubble animation
+    .txt{
+        position: relative;
+        z-index: 2;
+    }
+    .ink {
+        display: block;
+        position: absolute;
+        background: darken($background, 20%);
+        border-radius: 100%;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+        z-index: 1;
+    }
+    .animate {
+        -webkit-animation: ripple 0.65s linear;
+        -moz-animation: ripple 0.65s linear;
+        -ms-animation: ripple 0.65s linear;
+        -o-animation: ripple 0.65s linear;
+        animation: ripple 0.65s linear;
+    }
+    @-webkit-keyframes ripple {
+        100% {
+            opacity: 0;
+            -webkit-transform: scale(2.5);
+        }
+    }
+    @-moz-keyframes ripple {
+        100% {
+            opacity: 0;
+            -moz-transform: scale(2.5);
+        }
+    }
+    @-o-keyframes ripple {
+        100% {
+            opacity: 0;
+            -o-transform: scale(2.5);
+        }
+    }
+    @keyframes ripple {
+        100% {
+            opacity: 0;
+            transform: scale(2.5);
+        }
+    }
 }
 // Button sizes
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+@mixin button-size($padding-vertical:$padding-default / 3, $padding-horizontal:$padding-default, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default) {
     padding: $padding-vertical $padding-horizontal;
     font-size: $font-size;
     line-height: $line-height;
