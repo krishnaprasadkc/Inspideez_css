@@ -446,9 +446,32 @@ body {
   vertical-align: bottom;
 }
 /* line 3, ../sass/component/_button.scss */
-.btn .btn-xs {
+.btn.btn-xs {
+  padding: 2.5px 7.5px;
+  line-height: 1.3333333;
+  border-radius: 4px;
+}
+/* line 6, ../sass/component/_button.scss */
+.btn.btn-sm {
+  padding: 3.75px 10px;
+  line-height: 1.3333333;
+  border-radius: 4px;
+}
+/* line 9, ../sass/component/_button.scss */
+.btn.btn-md {
   padding: 5px 15px;
-  font-size: 14px;
+  line-height: 1.3333333;
+  border-radius: 4px;
+}
+/* line 12, ../sass/component/_button.scss */
+.btn.btn-xl {
+  padding: 7.5px 22.5px;
+  line-height: 1.3333333;
+  border-radius: 4px;
+}
+/* line 15, ../sass/component/_button.scss */
+.btn.btn-xxl {
+  padding: 10px 30px;
   line-height: 1.3333333;
   border-radius: 4px;
 }

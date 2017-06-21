@@ -1,19 +1,19 @@
 .btn{
     @include button-variant($radius:3px);
-    & .btn-xs{
+    &.btn-xs{
+        @include button-size($padding-vertical:$padding-default / 6, $padding-horizontal:$padding-default/2, $font-size:$font-size-default - 2, $line-height:$line-height-default, $border-radius:$border-radius-default);
+    }
+    &.btn-sm{
+        @include button-size($padding-vertical:$padding-default / 4, $padding-horizontal:$padding-default/1.5, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default);
+    }
+    &.btn-md{
         @include button-size();
     }
-    & .btn-sm{
-        
+    &.btn-xl{
+        @include button-size($padding-vertical:$padding-default / 2, $padding-horizontal:$padding-default * 1.5, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default);
     }
-    & .btn-md{
-        
-    }
-    & .btn-xl{
-        
-    }
-    & .btn-xxl{
-        
+    &.btn-xxl{
+        @include button-size($padding-vertical:$padding-default / 1.5, $padding-horizontal:$padding-default * 2, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default);
     }
 }
 .btn-default{
