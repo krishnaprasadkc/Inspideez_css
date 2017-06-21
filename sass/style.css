@@ -44,25 +44,420 @@
 ***************************************************************************************************************/
 /***************************************************************************************************************
 ***************************************************************************************************************/
+/* line 37, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-radio,
+.form-group {
+  position: relative;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px; }
+
+/* line 45, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-inline > .form-group,
+.form-inline > .btn {
+  display: inline-block;
+  margin-bottom: 0; }
+
+/* line 53, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group input {
+  height: 1.9rem; }
+
+/* line 57, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group textarea {
+  resize: none; }
+
+/* line 61, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group select {
+  width: 100%;
+  font-size: 1rem;
+  height: 1.6rem;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  background: none;
+  border: none;
+  line-height: 1.6;
+  box-shadow: none; }
+
+/* line 72, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group .control-label {
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: normal;
+  transition: all 0.28s ease; }
+
+/* line 84, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group .bar {
+  position: relative;
+  border-bottom: 0.0625rem solid #999;
+  display: block; }
+  /* line 89, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .form-group .bar::before {
+    content: '';
+    height: 0.125rem;
+    width: 0;
+    left: 50%;
+    bottom: -0.0625rem;
+    position: absolute;
+    background: #337ab7;
+    transition: left 0.28s ease, width 0.28s ease;
+    z-index: 2; }
+
+/* line 103, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group input,
+.form-group textarea {
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border-width: 0;
+  border-color: transparent;
+  line-height: 1.9;
+  width: 100%;
+  color: transparent;
+  transition: all 0.28s ease;
+  box-shadow: none; }
+
+/* line 117, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group input[type="file"] {
+  line-height: 1; }
+  /* line 120, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .form-group input[type="file"] ~ .bar {
+    display: none; }
+
+/* line 133, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group select,
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+  color: #333; }
+  /* line 136, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .form-group select ~ .control-label,
+  .form-group input:focus ~ .control-label,
+  .form-group input:valid ~ .control-label,
+  .form-group input.form-file ~ .control-label,
+  .form-group input.has-value ~ .control-label,
+  .form-group textarea:focus ~ .control-label,
+  .form-group textarea:valid ~ .control-label,
+  .form-group textarea.form-file ~ .control-label,
+  .form-group textarea.has-value ~ .control-label {
+    font-size: 0.8rem;
+    color: gray;
+    top: -1rem;
+    left: 0; }
+
+/* line 147, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none; }
+  /* line 150, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .form-group select:focus ~ .control-label,
+  .form-group input:focus ~ .control-label,
+  .form-group textarea:focus ~ .control-label {
+    color: #337ab7; }
+  /* line 155, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .form-group select:focus ~ .bar::before,
+  .form-group input:focus ~ .bar::before,
+  .form-group textarea:focus ~ .bar::before {
+    width: 100%;
+    left: 0; }
+
+/* line 167, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.checkbox label,
+.form-radio label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 2rem;
+  text-align: left;
+  color: #333;
+  display: block; }
+
+/* line 176, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.checkbox input,
+.form-radio input {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0; }
+
+/* line 184, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.radio {
+  margin-bottom: 1rem; }
+  /* line 187, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .radio .helper {
+    position: absolute;
+    top: -0.25rem;
+    left: -0.25rem;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    user-select: none;
+    color: #999; }
+    /* line 198, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .radio .helper::before,
+    .radio .helper::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0.25rem;
+      width: 1rem;
+      height: 1rem;
+      transition: transform 0.28s ease;
+      border-radius: 50%;
+      border: 0.125rem solid currentColor; }
+    /* line 211, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .radio .helper::after {
+      transform: scale(0);
+      background-color: #337ab7;
+      border-color: #337ab7; }
+  /* line 218, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .radio label:hover .helper {
+    color: #337ab7; }
+  /* line 225, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .radio input:checked ~ .helper::after {
+    transform: scale(0.5); }
+  /* line 228, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .radio input:checked ~ .helper::before {
+    color: #337ab7; }
+
+/* line 235, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.checkbox {
+  margin-top: 3rem;
+  margin-bottom: 1rem; }
+  /* line 241, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .checkbox .helper {
+    color: #999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    z-index: 0;
+    border: 0.125rem solid currentColor;
+    border-radius: 0.0625rem;
+    transition: border-color 0.28s ease; }
+    /* line 254, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .checkbox .helper::before,
+    .checkbox .helper::after {
+      position: absolute;
+      height: 0;
+      width: 0.2rem;
+      background-color: #337ab7;
+      display: block;
+      transform-origin: left top;
+      border-radius: 0.25rem;
+      content: '';
+      transition: opacity 0.28s ease, height 0s linear 0.28s;
+      opacity: 0; }
+    /* line 267, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .checkbox .helper::before {
+      top: 0.65rem;
+      left: 0.38rem;
+      transform: rotate(-135deg);
+      box-shadow: 0 0 0 0.0625rem #fff; }
+    /* line 274, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .checkbox .helper::after {
+      top: 0.3rem;
+      left: 0;
+      transform: rotate(-45deg); }
+  /* line 281, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .checkbox label:hover .helper {
+    color: #337ab7; }
+  /* line 286, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .checkbox input:checked ~ .helper {
+    color: #337ab7; }
+    /* line 290, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .checkbox input:checked ~ .helper::after,
+    .checkbox input:checked ~ .helper::before {
+      opacity: 1;
+      transition: height 0.28s ease; }
+    /* line 295, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .checkbox input:checked ~ .helper::after {
+      height: 0.5rem; }
+    /* line 299, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    .checkbox input:checked ~ .helper::before {
+      height: 1.2rem;
+      transition-delay: 0.28s; }
+
+/* line 308, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: 1rem; }
+
+/* line 314, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.has-error .legend.legend,
+.has-error.form-group .control-label.control-label {
+  color: #d9534f; }
+
+/* line 324, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.has-error.form-group .form-help,
+.has-error.form-group .helper,
+.has-error.checkbox .form-help,
+.has-error.checkbox .helper,
+.has-error.radio .form-help,
+.has-error.radio .helper,
+.has-error.form-radio .form-help,
+.has-error.form-radio .helper {
+  color: #d9534f; }
+
+/* line 330, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.has-error .bar::before {
+  background: #d9534f;
+  left: 0;
+  width: 100%; }
+
+/* line 338, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+.button {
+  position: relative;
+  background: currentColor;
+  border: 1px solid currentColor;
+  font-size: 1.1rem;
+  color: #4f93ce;
+  margin: 3rem 0;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  /* line 351, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .button span {
+    color: #fff;
+    position: relative;
+    z-index: 1; }
+  /* line 357, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .button::before {
+    content: '';
+    position: absolute;
+    background: #071017;
+    border: 50vh solid #1d4567;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    display: block;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0); }
+  /* line 373, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .button:hover {
+    color: #337ab7;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); }
+  /* line 380, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .button:active::before,
+  .button:focus::before {
+    transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0; }
+  /* line 387, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  .button:focus {
+    outline: none; }
+
+/********************************************************
+********************************************************/
+/********************************************************
+********************************************************/
+/* line 16, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/reset/_global.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/reset/_global.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 32, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/reset/_global.scss */
+body {
+  line-height: 1.33333; }
+
+/* line 38, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/reset/_global.scss */
+ol, ul {
+  list-style: none; }
+
 /********************************************************
 ********************************************************/
 /* line 4, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-1x {
+  margin: 15px; }
+
+/* line 7, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-top-1x {
+  margin-top: 15px; }
+
+/* line 10, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-right-1x {
+  margin-right: 15px; }
+
+/* line 13, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-bottom-1x {
+  margin-bottom: 15px; }
+
+/* line 16, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-left-1x {
+  margin-left: 15px; }
+
+/* line 22, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-2x {
+  margin: 30px; }
+
+/* line 25, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-top-2x {
+  margin-top: 30px; }
+
+/* line 28, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-right-2x {
+  margin-right: 30px; }
+
+/* line 31, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-bottom-2x {
+  margin-bottom: 30px; }
+
+/* line 34, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.margin-left-2x {
+  margin-left: 30px; }
+
+/* line 40, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .margin-none {
   margin: 0; }
 
-/* line 7, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 43, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .margin-top-none {
   margin-top: 0; }
 
-/* line 10, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 46, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .margin-right-none {
   margin-right: 0; }
 
-/* line 13, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 49, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .margin-bottom-none {
   margin-bottom: 0; }
 
-/* line 16, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 52, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .margin-left-none {
   margin-left: 0; }
 
@@ -70,207 +465,215 @@
 ********************************************************/
 /********************************************************
 ********************************************************/
-/* line 25, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
-.padding-none {
-  padding: 0; }
-
-/* line 28, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
-.padding-top-none {
-  padding-top: 0; }
-
-/* line 31, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
-.padding-right-none {
-  padding-right: 0; }
-
-/* line 34, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
-.padding-bottom-none {
-  padding-bottom: 0; }
-
-/* line 37, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
-.padding-left-none {
-  padding-left: 0; }
-
-/* line 43, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 62, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-1x, code {
   padding: 15px; }
 
-/* line 46, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 65, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-top-1x {
   padding-top: 15px; }
 
-/* line 49, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 68, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-right-1x {
   padding-right: 15px; }
 
-/* line 52, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 71, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-bottom-1x {
   padding-bottom: 15px; }
 
-/* line 55, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 74, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-left-1x {
   padding-left: 15px; }
 
-/* line 60, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 80, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-2x {
   padding: 30px; }
 
-/* line 63, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 83, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-top-2x {
   padding-top: 30px; }
 
-/* line 66, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 86, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-right-2x {
   padding-right: 30px; }
 
-/* line 69, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 89, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-bottom-2x {
   padding-bottom: 30px; }
 
-/* line 72, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 92, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .padding-left-2x {
   padding-left: 30px; }
 
+/* line 98, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.padding-none {
+  padding: 0; }
+
+/* line 101, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.padding-top-none {
+  padding-top: 0; }
+
+/* line 104, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.padding-right-none {
+  padding-right: 0; }
+
+/* line 107, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.padding-bottom-none {
+  padding-bottom: 0; }
+
+/* line 110, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.padding-left-none {
+  padding-left: 0; }
+
 /********************************************************
 ********************************************************/
-/* line 80, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 118, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .heading-one {
   font-size: 32px; }
 
-/* line 83, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 121, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .heading-two {
   font-size: 28px; }
 
-/* line 86, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 124, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .heading-three {
   font-size: 24px; }
 
-/* line 89, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 127, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .heading-four {
   font-size: 20px; }
 
-/* line 92, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 130, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .heading-five {
   font-size: 18px; }
 
-/* line 95, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 133, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .heading-six {
   font-size: 16px; }
 
 /********************************************************
 ********************************************************/
-/* line 102, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 140, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-thin {
   font-weight: 100; }
 
-/* line 105, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 143, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-extralight {
   font-weight: 200; }
 
-/* line 108, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 146, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-light {
   font-weight: 300; }
 
-/* line 111, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 149, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-normal {
   font-weight: 400; }
 
-/* line 114, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 152, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-semibold {
   font-weight: 500; }
 
-/* line 117, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 155, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-medium {
   font-weight: 600; }
 
-/* line 120, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 158, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-bold {
   font-weight: 700; }
 
-/* line 123, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 161, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-extrabold {
   font-weight: 800; }
 
-/* line 126, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 164, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-black {
   font-weight: 900; }
 
 /********************************************************
 ********************************************************/
-/* line 133, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 171, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-family-default, body, code {
   font-family: "Source Sans Pro", sans-serif; }
 
-/* line 137, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 175, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-family-one {
   font-family: "Roboto", sans-serif; }
 
-/* line 141, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 179, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-family-two {
   font-family: Georgia, "Times New Roman", Times, serif; }
 
 /********************************************************
 ********************************************************/
-/* line 148, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 186, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .bg-default, body {
   background: #fff; }
 
-/* line 151, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 189, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .bg-primary, code {
   background: #337ab7; }
 
-/* line 154, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 192, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .bg-secondary {
   background: #337ab7; }
 
 /********************************************************
 ********************************************************/
-/* line 161, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 199, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-size-default, code {
   font-size: 14px; }
 
-/* line 164, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 202, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-size-large {
   font-size: 16px; }
 
-/* line 167, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 205, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .font-size-small {
   font-size: 12px; }
 
 /********************************************************
 ********************************************************/
-/* line 174, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 212, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .text-black, body {
   color: #000; }
 
-/* line 177, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 215, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .text-white, code {
   color: #fff; }
 
-/* line 180, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 218, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .text-brand-one {
   color: #337ab7; }
 
 /********************************************************
 ********************************************************/
-/* line 187, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 225, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .block {
   display: block; }
 
-/* line 190, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 228, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .inline {
   display: inline; }
 
-/* line 193, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 231, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .inline-block {
   display: inline-block; }
 
-/* line 196, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 234, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .inline-table {
   display: inline-table; }
 
-/* line 199, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+/* line 237, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
 .flex {
   display: flex; }
+
+/********************************************************
+********************************************************/
+/* line 244, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/_extend.scss */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 /*****************************
 *****************************/
@@ -279,5 +682,133 @@ body {
   background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 75%, transparent); }
+
+/* line 21, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/component/_button.scss */
+.btn {
+  color: #fff;
+  background-color: #777777;
+  border-color: #6a6a6a;
+  padding: 5px 15px;
+  border-radius: 3px;
+  border: 1px solid;
+  cursor: pointer;
+  outline: none; }
+  /* line 15, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:focus,
+  .btn.focus {
+    color: #fff;
+    background-color: #5e5e5e;
+    border-color: #2b2b2b; }
+  /* line 20, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:hover {
+    color: #fff;
+    background-color: #5e5e5e;
+    border-color: #4c4c4c;
+    border: 1px solid; }
+  /* line 28, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:active,
+  .btn.active,
+  .open > .btn.dropdown-toggle {
+    color: #fff;
+    background-color: #5e5e5e;
+    border-color: #4c4c4c; }
+    /* line 34, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+    .btn:active:hover,
+    .btn:active:focus,
+    .btn:active.focus,
+    .btn.active:hover,
+    .btn.active:focus,
+    .btn.active.focus,
+    .open > .btn.dropdown-toggle:hover,
+    .open > .btn.dropdown-toggle:focus,
+    .open > .btn.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #4c4c4c;
+      border-color: #2b2b2b; }
+  /* line 42, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:active,
+  .btn.active,
+  .open > .btn.dropdown-toggle {
+    background-image: none; }
+  /* line 50, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn.disabled:hover,
+  .btn.disabled:focus,
+  .btn.disabled.focus,
+  .btn[disabled]:hover,
+  .btn[disabled]:focus,
+  .btn[disabled].focus,
+  fieldset[disabled] .btn:hover,
+  fieldset[disabled] .btn:focus,
+  fieldset[disabled] .btn.focus {
+    background-color: #777777;
+    border-color: #6a6a6a; }
+  /* line 55, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn .badge {
+    color: #777777;
+    background-color: #fff; }
+
+/* line 21, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/component/_form.scss */
+.btn {
+  color: #fff;
+  background-color: #777777;
+  border-color: #6a6a6a;
+  padding: 5px 15px;
+  border-radius: 3px;
+  border: 1px solid;
+  cursor: pointer;
+  outline: none; }
+  /* line 15, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:focus,
+  .btn.focus {
+    color: #fff;
+    background-color: #5e5e5e;
+    border-color: #2b2b2b; }
+  /* line 20, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:hover {
+    color: #fff;
+    background-color: #5e5e5e;
+    border-color: #4c4c4c;
+    border: 1px solid; }
+  /* line 28, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:active,
+  .btn.active,
+  .open > .btn.dropdown-toggle {
+    color: #fff;
+    background-color: #5e5e5e;
+    border-color: #4c4c4c; }
+    /* line 34, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+    .btn:active:hover,
+    .btn:active:focus,
+    .btn:active.focus,
+    .btn.active:hover,
+    .btn.active:focus,
+    .btn.active.focus,
+    .open > .btn.dropdown-toggle:hover,
+    .open > .btn.dropdown-toggle:focus,
+    .open > .btn.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #4c4c4c;
+      border-color: #2b2b2b; }
+  /* line 42, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn:active,
+  .btn.active,
+  .open > .btn.dropdown-toggle {
+    background-image: none; }
+  /* line 50, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn.disabled:hover,
+  .btn.disabled:focus,
+  .btn.disabled.focus,
+  .btn[disabled]:hover,
+  .btn[disabled]:focus,
+  .btn[disabled].focus,
+  fieldset[disabled] .btn:hover,
+  fieldset[disabled] .btn:focus,
+  fieldset[disabled] .btn.focus {
+    background-color: #777777;
+    border-color: #6a6a6a; }
+  /* line 55, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_buttons.scss */
+  .btn .badge {
+    color: #777777;
+    background-color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
