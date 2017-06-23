@@ -8,28 +8,28 @@ $shadow-6: 0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -
 $shadow-8: 0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2);
 
 // Font Sizes
-$form-font-size: $font-size-default !default;
-$form-active-font-size: $form-font-size * 0.8 !default;
-$form-active-top: -$form-font-size !default;
+$mf-font-size: $font-size-default !default;
+$mf-active-font-size: $mf-font-size * 0.8 !default;
+$mf-active-top: -$mf-font-size !default;
 
 // Margin & Paddings
-$form-gap: $form-font-size * 1.5 !default;
-$form-spacer: $form-font-size / 8 !default;
-
-$form-checkbox-gap: $form-font-size * 2 !default;
-$form-checkbox-top: 0 !default;
-$form-radio-margin: $form-font-size / -4 !default;
+$mf-gap: $mf-font-size * 1.5 !default;
+$mf-spacer: $mf-font-size / 8 !default;
+$mf-fieldset-margin: 0 0 $mf-gap * 2 !default;
+$mf-checkbox-gap: $mf-font-size * 2 !default;
+$mf-checkbox-top: 0 !default;
+$mf-radio-margin: $mf-font-size / -4 !default;
 
 // Colors
-$form-input-color: #333 !default;
-$form-border-color: #999 !default;
-$form-label-color: lighten($form-border-color, 10%) !default;
-$form-active-color: darken($form-border-color, 10%) !default;
-$form-focus-color: #337ab7 !default;
-$form-error-color: #d9534f !default;
+$mf-input-color: #333 !default;
+$mf-border-color: #999 !default;
+$mf-label-color: lighten($mf-border-color, 10%) !default;
+$mf-active-color: darken($mf-border-color, 10%) !default;
+$mf-focus-color: #337ab7 !default;
+$mf-error-color: #d9534f !default;
 
 // Animation
-$form-transition-speed: 0.28s !default;
+$mf-transition-speed: 0.28s !default;
 
 
 
@@ -51,7 +51,7 @@ $form-transition-speed: 0.28s !default;
 .form-group {
 	// scss-lint:disable QualifyingElement, NestingDepth
 	input {
-		height: ($form-font-size * 1.9);
+		height: ($mf-font-size * 1.9);
 	}
 
 	textarea {
@@ -60,9 +60,9 @@ $form-transition-speed: 0.28s !default;
 
 	select {
 		width: 100%;
-		font-size: $form-font-size;
-		height: ($form-font-size * 1.6);
-		padding: $form-spacer $form-spacer ($form-spacer / 2);
+		font-size: $mf-font-size;
+		height: ($mf-font-size * 1.6);
+		padding: $mf-spacer $mf-spacer ($mf-spacer / 2);
 		background: none;
 		border: none;
 		line-height: 1.6;
@@ -71,30 +71,30 @@ $form-transition-speed: 0.28s !default;
 
 	.control-label {
 		position: absolute;
-		top: ($form-font-size / 4);
+		top: ($mf-font-size / 4);
 		pointer-events: none;
-		padding-left: $form-spacer;
+		padding-left: $mf-spacer;
 		z-index: 1;
-		color: $form-label-color;
-		font-size: $form-font-size;
+		color: $mf-label-color;
+		font-size: $mf-font-size;
 		font-weight: normal;
-		transition: all $form-transition-speed ease;
+		transition: all $mf-transition-speed ease;
 	}
 
 	.bar {
 		position: relative;
-		border-bottom: ($form-font-size / 16) solid $form-border-color;
+		border-bottom: ($mf-font-size / 16) solid $mf-border-color;
 		display: block;
 		
 		&::before {
 			content: '';
-			height: ($form-font-size / 8);
+			height: ($mf-font-size / 8);
 			width: 0;
 			left: 50%;
-			bottom: ($form-font-size / -16);
+			bottom: ($mf-font-size / -16);
 			position: absolute;
-			background: $form-focus-color;
-			transition: left $form-transition-speed ease, width $form-transition-speed ease;
+			background: $mf-focus-color;
+			transition: left $mf-transition-speed ease, width $mf-transition-speed ease;
 			z-index: 2;
 		}
 	}
@@ -103,14 +103,14 @@ $form-transition-speed: 0.28s !default;
 	textarea {
 		display: block;
 		background: none;
-		padding: $form-spacer $form-spacer ($form-spacer / 2);
-		font-size: $form-font-size;
+		padding: $mf-spacer $mf-spacer ($mf-spacer / 2);
+		font-size: $mf-font-size;
 		border-width: 0;
 		border-color: transparent;
 		line-height: 1.9;
 		width: 100%;
 		color: transparent;
-		transition: all $form-transition-speed ease;
+		transition: all $mf-transition-speed ease;
 		box-shadow: none;
 	}
 
@@ -131,12 +131,12 @@ $form-transition-speed: 0.28s !default;
 	textarea:valid,
 	textarea.form-file,
 	textarea.has-value {
-		color: $form-input-color;
+		color: $mf-input-color;
 
 		~ .control-label {
-			font-size: $form-active-font-size;
-			color: $form-active-color;
-			top: $form-active-top;
+			font-size: $mf-active-font-size;
+			color: $mf-active-color;
+			top: $mf-active-top;
 			left: 0;
 		}
 	}
@@ -148,7 +148,7 @@ $form-transition-speed: 0.28s !default;
 			outline: none;
 
 			~ .control-label {
-				color: $form-focus-color;
+				color: $mf-focus-color;
 			}
 
 			~ .bar {
@@ -167,9 +167,9 @@ $form-transition-speed: 0.28s !default;
 	label {
 		position: relative;
 		cursor: pointer;
-		padding-left: $form-checkbox-gap;
+		padding-left: $mf-checkbox-gap;
 		text-align: left;
-		color: $form-input-color;
+		color: $mf-input-color;
 		display: block;
 	}
 
@@ -182,17 +182,17 @@ $form-transition-speed: 0.28s !default;
 }
 
 .radio {
-	margin-bottom: $form-font-size;
+	margin-bottom: $mf-font-size;
 
 	.helper {
 		position: absolute;
-		top: $form-radio-margin;
-		left: $form-radio-margin;
+		top: $mf-radio-margin;
+		left: $mf-radio-margin;
 		cursor: pointer;
 		display: block;
-		font-size: $form-font-size;
+		font-size: $mf-font-size;
 		user-select: none;
-		color: $form-border-color;
+		color: $mf-border-color;
 
 		&::before,
 		&::after {
@@ -200,23 +200,23 @@ $form-transition-speed: 0.28s !default;
 			position: absolute;
 			left: 0;
 			top: 0;
-			margin: ($form-spacer * 2);
-			width: $form-font-size;
-			height: $form-font-size;
-			transition: transform $form-transition-speed ease;
+			margin: ($mf-spacer * 2);
+			width: $mf-font-size;
+			height: $mf-font-size;
+			transition: transform $mf-transition-speed ease;
 			border-radius: 50%;
-			border: ($form-font-size / 8) solid currentColor;
+			border: ($mf-font-size / 8) solid currentColor;
 		}
 
 		&::after {
 			transform: scale(0);
-			background-color: $form-focus-color;
-			border-color: $form-focus-color;
+			background-color: $mf-focus-color;
+			border-color: $mf-focus-color;
 		}
 	}
 
 	label:hover .helper {
-		color: $form-focus-color;
+		color: $mf-focus-color;
 	}
 
 	// scss-lint:disable QualifyingElement, NestingDepth
@@ -226,7 +226,7 @@ $form-transition-speed: 0.28s !default;
 					transform: scale(0.5);
 			}
 			&::before {
-				color: $form-focus-color;
+				color: $mf-focus-color;
 			}
 		}
 	}
@@ -235,69 +235,70 @@ $form-transition-speed: 0.28s !default;
 .checkbox {
 	// scss-lint:disable QualifyingElement
 	
-	margin-top: ($form-gap * 2);
-	margin-bottom: $form-font-size;
+	margin-top: ($mf-gap * 2);
+	margin-bottom: $mf-font-size;
 	
 	.helper {
-		color: $form-border-color;
+		color: $mf-border-color;
 		position: absolute;
-		top: $form-checkbox-top;
+		top: $mf-checkbox-top;
 		left: 0;
-		width: $form-font-size;
-		height: $form-font-size;
+		width: $mf-font-size;
+		height: $mf-font-size;
 		z-index: 0;
-		border: ($form-font-size / 8) solid currentColor;
-		border-radius: ($form-font-size / 16);
-		transition: border-color $form-transition-speed ease;
+		border: ($mf-font-size / 8) solid currentColor;
+		border-radius: ($mf-font-size / 16);
+		transition: border-color $mf-transition-speed ease;
 		
 		&::before,
 		&::after {
 			position: absolute;
 			height: 0;
-			width: ($form-font-size * 0.2);
-			background-color: $form-focus-color;
+			width: ($mf-font-size * 0.2);
+			background-color: $mf-focus-color;
 			display: block;
 			transform-origin: left top;
-			border-radius: ($form-font-size / 4);
+			border-radius: ($mf-font-size / 4);
 			content: '';
-			transition: opacity $form-transition-speed ease, height 0s linear $form-transition-speed;
+			transition: opacity $mf-transition-speed ease, height 0s linear $mf-transition-speed;
 			opacity: 0;
 		}
 		
 		&::before {
-			top: ($form-font-size * 0.9);
-			left: ($form-font-size * 0.35);
+			top: ($mf-font-size * 0.65);
+			left: ($mf-font-size * 0.38);
 			transform: rotate(-135deg);
+			box-shadow: 0 0 0 ($mf-font-size / 16) $body-bg;
 		}
 
 		&::after {
-			top: ($form-font-size * 0.5);
+			top: ($mf-font-size * 0.3);
 			left: 0;
 			transform: rotate(-45deg);
 		}
 	}
 	
 	label:hover .helper {
-		color: $form-focus-color;
+		color: $mf-focus-color;
 	}
 	
 	input:checked {
 		~ .helper {
-			color: $form-focus-color;
+			color: $mf-focus-color;
 			
 			&::after,
 			&::before {
 				opacity: 1;
-				transition: height $form-transition-speed ease;
+				transition: height $mf-transition-speed ease;
 			}
 
 			&::after {
-				height: ($form-font-size / 2);
+				height: ($mf-font-size / 2);
 			}
 
 			&::before {
-				height: ($form-font-size * 1.4);
-				transition-delay: $form-transition-speed;
+				height: ($mf-font-size * 1.2);
+				transition-delay: $mf-transition-speed;
 			}
 		}
 	}
@@ -305,14 +306,14 @@ $form-transition-speed: 0.28s !default;
 
 .radio + .radio,
 .checkbox + .checkbox {
-	margin-top: $form-font-size;
+	margin-top: $mf-font-size;
 }
 
 .has-error {
 	.legend.legend,
 	&.form-group .control-label.control-label {
 		// Prevent !importantRule
-		color: $form-error-color;
+		color: $mf-error-color;
 	}
 	
 	&.form-group,
@@ -321,13 +322,13 @@ $form-transition-speed: 0.28s !default;
 	&.form-radio {
 		.form-help,
 		.helper {
-			color: $form-error-color;
+			color: $mf-error-color;
 		}
 	}
 	
 	.bar {
 		&::before {
-			background: $form-error-color;
+			background: $mf-error-color;
 			left: 0;
 			width: 100%;
 		}
@@ -338,12 +339,12 @@ $form-transition-speed: 0.28s !default;
 	position: relative;
 	background: currentColor;
 	border: 1px solid currentColor;
-	font-size: ($form-font-size * 1.1);
-	color: lighten($form-focus-color, 10%);
-	margin:( $form-gap * 2) 0;
-	padding: ($form-gap / 2) ($form-gap * 2);
+	font-size: ($mf-font-size * 1.1);
+	color: lighten($mf-focus-color, 10%);
+	margin:( $mf-gap * 2) 0;
+	padding: ($mf-gap / 2) ($mf-gap * 2);
 	cursor: pointer;
-	transition: background-color $form-transition-speed ease, color $form-transition-speed ease, box-shadow $form-transition-speed ease;
+	transition: background-color $mf-transition-speed ease, color $mf-transition-speed ease, box-shadow $mf-transition-speed ease;
 	overflow: hidden;
 	box-shadow: $shadow-2;
 	
@@ -356,8 +357,8 @@ $form-transition-speed: 0.28s !default;
 	&::before {
 		content: '';
 		position: absolute;
-		background: darken($form-focus-color, 40%);
-		border: 50vh solid darken($form-focus-color, 20%);
+		background: darken($mf-focus-color, 40%);
+		border: 50vh solid darken($mf-focus-color, 20%);
 		width: 30vh;
 		height: 30vh;
 		border-radius: 50%;
@@ -370,14 +371,14 @@ $form-transition-speed: 0.28s !default;
 	}
 	
 	&:hover {
-		color: $form-focus-color;
+		color: $mf-focus-color;
 		box-shadow: $shadow-6;
 	}
 	
 	&:active,
 	&:focus {
 		&::before {
-			transition: transform ($form-transition-speed * 4) ease, opacity $form-transition-speed ease ($form-transition-speed * 1.3);
+			transition: transform ($mf-transition-speed * 4) ease, opacity $mf-transition-speed ease ($mf-transition-speed * 1.3);
 			transform: translate(-50%, -50%) scale(1);
 			opacity: 0;
 		}

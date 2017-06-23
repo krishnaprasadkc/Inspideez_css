@@ -260,44 +260,45 @@
       opacity: 0; }
     /* line 267, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
     .checkbox .helper::before {
-      top: 12.6px;
-      left: 4.9px;
-      transform: rotate(-135deg); }
-    /* line 273, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+      top: 9.1px;
+      left: 5.32px;
+      transform: rotate(-135deg);
+      box-shadow: 0 0 0 0.875px #fff; }
+    /* line 274, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
     .checkbox .helper::after {
-      top: 7px;
+      top: 4.2px;
       left: 0;
       transform: rotate(-45deg); }
-  /* line 280, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  /* line 281, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
   .checkbox label:hover .helper {
     color: #337ab7; }
-  /* line 285, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  /* line 286, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
   .checkbox input:checked ~ .helper {
     color: #337ab7; }
-    /* line 289, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    /* line 290, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
     .checkbox input:checked ~ .helper::after,
     .checkbox input:checked ~ .helper::before {
       opacity: 1;
       transition: height 0.28s ease; }
-    /* line 294, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    /* line 295, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
     .checkbox input:checked ~ .helper::after {
       height: 7px; }
-    /* line 298, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+    /* line 299, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
     .checkbox input:checked ~ .helper::before {
-      height: 19.6px;
+      height: 16.8px;
       transition-delay: 0.28s; }
 
-/* line 307, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+/* line 308, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: 14px; }
 
-/* line 313, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+/* line 314, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
 .has-error .legend.legend,
 .has-error.form-group .control-label.control-label {
   color: #d9534f; }
 
-/* line 323, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+/* line 324, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
 .has-error.form-group .form-help,
 .has-error.form-group .helper,
 .has-error.checkbox .form-help,
@@ -308,13 +309,13 @@
 .has-error.form-radio .helper {
   color: #d9534f; }
 
-/* line 329, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+/* line 330, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
 .has-error .bar::before {
   background: #d9534f;
   left: 0;
   width: 100%; }
 
-/* line 337, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+/* line 338, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
 .button {
   position: relative;
   background: currentColor;
@@ -327,12 +328,12 @@
   transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
   overflow: hidden;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
-  /* line 350, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  /* line 351, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
   .button span {
     color: #fff;
     position: relative;
     z-index: 1; }
-  /* line 356, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  /* line 357, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
   .button::before {
     content: '';
     position: absolute;
@@ -347,17 +348,17 @@
     z-index: 0;
     opacity: 1;
     transform: translate(-50%, -50%) scale(0); }
-  /* line 372, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  /* line 373, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
   .button:hover {
     color: #337ab7;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); }
-  /* line 379, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  /* line 380, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
   .button:active::before,
   .button:focus::before {
     transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
     transform: translate(-50%, -50%) scale(1);
     opacity: 0; }
-  /* line 386, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
+  /* line 387, D:/KP/2017/CSS FRAMEWORK/Inspideez_css/sass/helper/mixins/_forms.scss */
   .button:focus {
     outline: none; }
 
