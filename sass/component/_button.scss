@@ -1,36 +1,37 @@
-.btn{
-    @include button-variant($radius:3px);
-    &.btn-xs{
-        @include button-size($padding-vertical:$padding-default / 6, $padding-horizontal:$padding-default/2, $font-size:$font-size-default - 2, $line-height:$line-height-default, $border-radius:$border-radius-default);
+.btn {
+    @include button-variant($radius: 3px);
+    &.btn-xs {
+        @include button-size($padding-vertical: $padding-default / 6, $padding-horizontal: $padding-default/2, $font-size: $font-size-default - 2, $line-height: $line-height-default, $border-radius: $border-radius-default);
     }
-    &.btn-sm{
-        @include button-size($padding-vertical:$padding-default / 4, $padding-horizontal:$padding-default/1.5, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default);
+    &.btn-sm {
+        @include button-size($padding-vertical: $padding-default / 4, $padding-horizontal: $padding-default/1.5, $font-size: $font-size-default, $line-height: $line-height-default, $border-radius: $border-radius-default);
     }
-    &.btn-md{
+    &.btn-md {
         @include button-size();
     }
-    &.btn-xl{
-        @include button-size($padding-vertical:$padding-default / 2, $padding-horizontal:$padding-default * 1.5, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default);
+    &.btn-xl {
+        @include button-size($padding-vertical: $padding-default / 2, $padding-horizontal: $padding-default * 1.5, $font-size: $font-size-default, $line-height: $line-height-default, $border-radius: $border-radius-default);
     }
-    &.btn-xxl{
-        @include button-size($padding-vertical:$padding-default / 1.5, $padding-horizontal:$padding-default * 2, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default);
+    &.btn-xxl {
+        @include button-size($padding-vertical: $padding-default / 1.5, $padding-horizontal: $padding-default * 2, $font-size: $font-size-default, $line-height: $line-height-default, $border-radius: $border-radius-default);
     }
-}
-.btn-default{
-    @include button-colors($gray-lighter,$clr-black);
-}
-.btn-primary{
-    @include button-colors($brand-primary);
-}
-.btn-success{
-    @include button-colors($brand-success);
-}
-.btn-info{
-    @include button-colors($brand-info);
-}
-.btn-warning{
-    @include button-colors($brand-warning);
-}
-.btn-danger{
-    @include button-colors($brand-danger);
+    /**/
+    &.btn-default {
+        @include button-colors($gray-lighter, $clr-black);
+    }
+    &.btn-primary {
+        @include button-colors($brand-primary);
+    }
+    &.btn-success {
+        @include button-colors($brand-success);
+    }
+    &.btn-info {
+        @include button-colors($brand-info);
+    }
+    &.btn-warning {
+        @include button-colors($brand-warning);
+    }
+    &.btn-danger {
+        @include button-colors($brand-danger);
+    }
 }
