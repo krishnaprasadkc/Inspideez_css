@@ -2,11 +2,12 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-@mixin button-variant($color:$clr-black, $background:$gray-lighter, $border:$gray-lighter, $radius:3px) {
+//border radius set as 0 
+@mixin button-variant($color:$clr-black, $background:$gray-lighter, $border:$gray-lighter,$border-radius-default:0) {
     padding: 5px 15px;
-    border-radius: $radius;
     cursor: pointer;
     outline: none;
+    border-radius: $border-radius-default;
     text-decoration: none;
     background: $background;
     color: $color;
@@ -35,9 +36,9 @@
     }
     &:hover {
         color: $color;
-        background-color: darken($background, 10%);
+        background-color: darken($background, 8%);
         border: 1px solid;
-        border-color: darken($background, 19%);
+        border-color: darken($background, 18%);
     }
     &:active,
     &.active,
@@ -132,5 +133,4 @@
 @mixin button-size($padding-vertical:$padding-default / 3, $padding-horizontal:$padding-default, $font-size:$font-size-default, $line-height:$line-height-default, $border-radius:$border-radius-default) {
     padding: $padding-vertical $padding-horizontal;
     line-height: $line-height;
-    border-radius: $border-radius;
 }

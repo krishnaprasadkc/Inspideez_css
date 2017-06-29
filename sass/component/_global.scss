@@ -3,6 +3,7 @@ body{
 	@extend .font-family-default;
 	@extend .bg-default;
 	@extend .text-black;
+    font-size: $font-size-default;
 }
 code{
 	@extend .font-family-default;
