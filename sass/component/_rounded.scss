@@ -1,0 +1,13 @@
+/*for border radius*/
+.rounded{
+    border-radius: $border-radius-default *25;
+    &.btn{
+        border-radius: $border-radius-default *25;
+    }
+    >.btn{
+        border-radius: $border-radius-default *25;
+    }
+}
+
+
+
