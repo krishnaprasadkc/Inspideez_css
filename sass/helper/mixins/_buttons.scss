@@ -42,7 +42,7 @@
     }
     &:active,
     &.active,
-    .open > &.dropdown-toggle {
+    .open{
         color: $color;
         background-color: darken($background, 10%);
         border: 1px solid;
@@ -51,9 +51,9 @@
 //        &:focus,
         &.focus {
             color: $color;
-            background-color: darken($background, 17%);
+            background-color: darken($background, 10%);
             border: 1px solid;
-            border-color: darken($background, 25%);
+            border-color: darken($background, 12%);
         }
     }
     & .btn-bubble{

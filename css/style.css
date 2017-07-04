@@ -424,6 +424,147 @@ ol, ul {
   margin-right: auto;
 }
 
+/* line 2, ../sass/helper/_animation.scss */
+.animation-fade-down-open, .dropdown.open .dropdown-menu {
+  animation: animation-fade-down-open ease-in-out 200ms;
+  animation-iteration-count: 1;
+  transform-origin: 50% 0%;
+  -webkit-animation: animation-fade-down-open ease-in-out 200ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 0%;
+  -moz-animation: animation-fade-down-open ease-in-out 200ms;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: 50% 0%;
+  -o-animation: animation-fade-down-open ease-in-out 200ms;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: 50% 0%;
+  -ms-animation: animation-fade-down-open ease-in-out 200ms;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: 50% 0%;
+}
+
+@keyframes animation-fade-down-open {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1.00;
+    transform: scaleY(1);
+  }
+}
+@-moz-keyframes animation-fade-down-open {
+  0% {
+    opacity: 0;
+    -moz-transform: scaleY(0);
+  }
+  100% {
+    opacity: 1.00;
+    -moz-transform: scaleY(1);
+  }
+}
+@-webkit-keyframes animation-fade-down-open {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+  }
+  100% {
+    opacity: 1.00;
+    -webkit-transform: scaleY(1);
+  }
+}
+@-o-keyframes animation-fade-down-open {
+  0% {
+    opacity: 0;
+    -o-transform: scaleY(0);
+  }
+  100% {
+    opacity: 1.00;
+    -o-transform: scaleY(1);
+  }
+}
+@-ms-keyframes animation-fade-down-open {
+  0% {
+    opacity: 0;
+    -ms-transform: scaleY(0);
+  }
+  100% {
+    opacity: 1.00;
+    -ms-transform: scaleY(1);
+  }
+}
+/*.animation-fade-down-open*/
+/*.animation-fade-up-close*/
+/* line 77, ../sass/helper/_animation.scss */
+.animation-fade-up-close, .dropdown.closing .dropdown-menu {
+  animation: animation-fade-up-close ease-in-out 200ms;
+  animation-iteration-count: 1;
+  transform-origin: 50% 0%;
+  -webkit-animation: animation-fade-up-close ease-in-out 200ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 0%;
+  -moz-animation: animation-fade-up-close ease-in-out 200ms;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: 50% 0%;
+  -o-animation: animation-fade-up-close ease-in-out 200ms;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: 50% 0%;
+  -ms-animation: animation-fade-up-close ease-in-out 200ms;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: 50% 0%;
+}
+
+@keyframes animation-fade-up-close {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+@-moz-keyframes animation-fade-up-close {
+  0% {
+    opacity: 1;
+    -moz-transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: scaleY(0);
+  }
+}
+@-webkit-keyframes animation-fade-up-close {
+  0% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+  }
+}
+@-o-keyframes animation-fade-up-close {
+  0% {
+    opacity: 1;
+    -o-transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -o-transform: scaleY(0);
+  }
+}
+@-ms-keyframes animation-fade-up-close {
+  0% {
+    opacity: 1;
+    -ms-transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -ms-transform: scaleY(0);
+  }
+}
+/*.animation-fade-up-close*/
 /*****************************
 *****************************/
 /* line 1, ../sass/component/_global.scss */
@@ -432,6 +573,16 @@ body {
   background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 75%, transparent);
   font-size: 14px;
+}
+
+/* line 16, ../sass/component/_global.scss */
+hr {
+  clear: both;
+}
+
+/* line 19, ../sass/component/_global.scss */
+a {
+  text-decoration: none;
 }
 
 /*for border radius*/
@@ -510,18 +661,21 @@ body {
   border-color: #c1c1c1;
 }
 /* line 43, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-default:active, .btn.btn-default.active, .open > .btn.btn-default.dropdown-toggle {
+.btn.btn-default:active, .btn.btn-default.active,
+.btn.btn-default .open {
   color: #333;
   background-color: #d5d5d5;
   border: 1px solid;
   border-color: #d0d0d0;
 }
 /* line 50, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-default:active:hover, .btn.btn-default:active.focus, .btn.btn-default.active:hover, .btn.btn-default.active.focus, .open > .btn.btn-default.dropdown-toggle:hover, .open > .btn.btn-default.dropdown-toggle.focus {
+.btn.btn-default:active:hover, .btn.btn-default:active.focus, .btn.btn-default.active:hover, .btn.btn-default.active.focus,
+.btn.btn-default .open:hover,
+.btn.btn-default .open.focus {
   color: #333;
-  background-color: #c3c3c3;
+  background-color: #d5d5d5;
   border: 1px solid;
-  border-color: #afafaf;
+  border-color: #d0d0d0;
 }
 /* line 60, ../sass/helper/mixins/_buttons.scss */
 .btn.btn-default .btn-bubble:active {
@@ -614,18 +768,21 @@ body {
   border-color: #1f4a6f;
 }
 /* line 43, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-primary:active, .btn.btn-primary.active, .open > .btn.btn-primary.dropdown-toggle {
+.btn.btn-primary:active, .btn.btn-primary.active,
+.btn.btn-primary .open {
   color: #fff;
   background-color: #285f8f;
   border: 1px solid;
   border-color: #265a87;
 }
 /* line 50, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-primary:active:hover, .btn.btn-primary:active.focus, .btn.btn-primary.active:hover, .btn.btn-primary.active.focus, .open > .btn.btn-primary.dropdown-toggle:hover, .open > .btn.btn-primary.dropdown-toggle.focus {
+.btn.btn-primary:active:hover, .btn.btn-primary:active.focus, .btn.btn-primary.active:hover, .btn.btn-primary.active.focus,
+.btn.btn-primary .open:hover,
+.btn.btn-primary .open.focus {
   color: #fff;
-  background-color: #204d73;
+  background-color: #285f8f;
   border: 1px solid;
-  border-color: #173853;
+  border-color: #265a87;
 }
 /* line 60, ../sass/helper/mixins/_buttons.scss */
 .btn.btn-primary .btn-bubble:active {
@@ -718,18 +875,21 @@ body {
   border-color: #388038;
 }
 /* line 43, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-success:active, .btn.btn-success.active, .open > .btn.btn-success.dropdown-toggle {
+.btn.btn-success:active, .btn.btn-success.active,
+.btn.btn-success .open {
   color: #fff;
   background-color: #449d44;
   border: 1px solid;
   border-color: #419641;
 }
 /* line 50, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-success:active:hover, .btn.btn-success:active.focus, .btn.btn-success.active:hover, .btn.btn-success.active.focus, .open > .btn.btn-success.dropdown-toggle:hover, .open > .btn.btn-success.dropdown-toggle.focus {
+.btn.btn-success:active:hover, .btn.btn-success:active.focus, .btn.btn-success.active:hover, .btn.btn-success.active.focus,
+.btn.btn-success .open:hover,
+.btn.btn-success .open.focus {
   color: #fff;
-  background-color: #398439;
+  background-color: #449d44;
   border: 1px solid;
-  border-color: #2d672d;
+  border-color: #419641;
 }
 /* line 60, ../sass/helper/mixins/_buttons.scss */
 .btn.btn-success .btn-bubble:active {
@@ -822,18 +982,21 @@ body {
   border-color: #2596b8;
 }
 /* line 43, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-info:active, .btn.btn-info.active, .open > .btn.btn-info.dropdown-toggle {
+.btn.btn-info:active, .btn.btn-info.active,
+.btn.btn-info .open {
   color: #fff;
   background-color: #31b0d5;
   border: 1px solid;
   border-color: #2aabd2;
 }
 /* line 50, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-info:active:hover, .btn.btn-info:active.focus, .btn.btn-info.active:hover, .btn.btn-info.active.focus, .open > .btn.btn-info.dropdown-toggle:hover, .open > .btn.btn-info.dropdown-toggle.focus {
+.btn.btn-info:active:hover, .btn.btn-info:active.focus, .btn.btn-info.active:hover, .btn.btn-info.active.focus,
+.btn.btn-info .open:hover,
+.btn.btn-info .open.focus {
   color: #fff;
-  background-color: #269abc;
+  background-color: #31b0d5;
   border: 1px solid;
-  border-color: #1f7e9a;
+  border-color: #2aabd2;
 }
 /* line 60, ../sass/helper/mixins/_buttons.scss */
 .btn.btn-info .btn-bubble:active {
@@ -926,18 +1089,21 @@ body {
   border-color: #d18212;
 }
 /* line 43, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-warning:active, .btn.btn-warning.active, .open > .btn.btn-warning.dropdown-toggle {
+.btn.btn-warning:active, .btn.btn-warning.active,
+.btn.btn-warning .open {
   color: #fff;
   background-color: #ec971f;
   border: 1px solid;
   border-color: #eb9316;
 }
 /* line 50, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-warning:active:hover, .btn.btn-warning:active.focus, .btn.btn-warning.active:hover, .btn.btn-warning.active.focus, .open > .btn.btn-warning.dropdown-toggle:hover, .open > .btn.btn-warning.dropdown-toggle.focus {
+.btn.btn-warning:active:hover, .btn.btn-warning:active.focus, .btn.btn-warning.active:hover, .btn.btn-warning.active.focus,
+.btn.btn-warning .open:hover,
+.btn.btn-warning .open.focus {
   color: #fff;
-  background-color: #d58512;
+  background-color: #ec971f;
   border: 1px solid;
-  border-color: #b06d0f;
+  border-color: #eb9316;
 }
 /* line 60, ../sass/helper/mixins/_buttons.scss */
 .btn.btn-warning .btn-bubble:active {
@@ -1030,18 +1196,21 @@ body {
   border-color: #a82824;
 }
 /* line 43, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-danger:active, .btn.btn-danger.active, .open > .btn.btn-danger.dropdown-toggle {
+.btn.btn-danger:active, .btn.btn-danger.active,
+.btn.btn-danger .open {
   color: #fff;
   background-color: #c9302c;
   border: 1px solid;
   border-color: #c12e2a;
 }
 /* line 50, ../sass/helper/mixins/_buttons.scss */
-.btn.btn-danger:active:hover, .btn.btn-danger:active.focus, .btn.btn-danger.active:hover, .btn.btn-danger.active.focus, .open > .btn.btn-danger.dropdown-toggle:hover, .open > .btn.btn-danger.dropdown-toggle.focus {
+.btn.btn-danger:active:hover, .btn.btn-danger:active.focus, .btn.btn-danger.active:hover, .btn.btn-danger.active.focus,
+.btn.btn-danger .open:hover,
+.btn.btn-danger .open.focus {
   color: #fff;
-  background-color: #ac2925;
+  background-color: #c9302c;
   border: 1px solid;
-  border-color: #8b211e;
+  border-color: #c12e2a;
 }
 /* line 60, ../sass/helper/mixins/_buttons.scss */
 .btn.btn-danger .btn-bubble:active {
@@ -1139,4 +1308,52 @@ body {
 .btn-group > .btn:first-child:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+/* line 1, ../sass/component/_dropdown.scss */
+.dropdown {
+  position: relative;
+}
+/* line 4, ../sass/component/_dropdown.scss */
+.dropdown .dropdown-toggle i {
+  font-size: 120%;
+  padding-left: 5px;
+  line-height: .6;
+}
+/* line 11, ../sass/component/_dropdown.scss */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+/* line 17, ../sass/component/_dropdown.scss */
+.dropdown.closing .dropdown-menu {
+  display: block;
+}
+/* line 22, ../sass/component/_dropdown.scss */
+.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+/* line 40, ../sass/component/_dropdown.scss */
+.dropdown .dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
 }
