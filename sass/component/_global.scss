@@ -3,6 +3,7 @@ body{
 	@extend .font-family-default;
 	@extend .bg-default;
 	@extend .text-black;
+    font-size: $font-size-default;
 }
 code{
 	@extend .font-family-default;
@@ -11,4 +12,10 @@ code{
 	@extend .font-size-default;
 	@extend .text-white;
 	
+}
+hr{
+    clear: both;
+}
+a{
+    text-decoration: none
 }
