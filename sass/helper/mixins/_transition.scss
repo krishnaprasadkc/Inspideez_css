@@ -1,24 +1,18 @@
 /*
- * Apply a CSS3 transition
- *
- * $property The property you want to animate, eg opacity
- * $duration The duration of the animation, eg 1s
- * $ms Include -ms-transition; default is false because IE does not support transitionEnd callback
- *
- * @include transition(opacity, 0.5s);
+ * ease-in-out
  */
 
-@mixin transition($property, $duration, $ms: false) {
-	-webkit-transition: $property $duration ease-in-out;
-	-moz-transition: $property $duration ease-in-out;
-	-o-transition: $property $duration ease-in-out;
+@mixin transition($property : all, $duration : $transition-time-default, $option : $transition-function-default, $ms: false) {
+	-webkit-transition: $property $duration  $option;
+	-moz-transition: $property $duration $option;
+	-o-transition: $property $duration $option;
 	@if ($ms) {
-		-ms-transition: $property $duration ease-in-out;
+		-ms-transition: $property $duration $option;
 	}
-	transition: $property $duration ease-in-out;
+	transition: $property $duration $option;
 }
 
-@mixin transitionLong($property, $duration, $easing:ease-in-out, $delay:false) {
+@mixin transitionLong($property, $duration, $easing:$option, $delay:false) {
 	@include transitionProperty($property);
 	@include transitionDuration($duration);
 	

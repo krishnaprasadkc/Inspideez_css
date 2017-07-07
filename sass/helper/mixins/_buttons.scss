@@ -3,7 +3,7 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 //border radius set as 0 
-@mixin button-variant($color:$clr-black, $background:$gray-lighter, $border:$gray-lighter,$border-radius-default:0) {
+@mixin button-variant($color:$clr-black, $background:$gray-lighter, $border:$gray-lighter) {
     padding: 5px 15px;
     cursor: pointer;
     outline: none;

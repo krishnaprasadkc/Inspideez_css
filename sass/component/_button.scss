@@ -58,3 +58,12 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
+.rounded{
+    border-radius: 100px;
+    &.btn{
+        border-radius: 100px;
+    }
+    > .btn{
+        border-radius: 100px;
+    }
+}
