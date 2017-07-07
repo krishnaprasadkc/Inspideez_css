@@ -1,5 +1,6 @@
 .dropdown{
     position: relative;
+    display: inline-block;
     .dropdown-toggle{
         i{
             font-size: 120%;
@@ -37,16 +38,18 @@
     .dropdown{
         display: inline-block;
         float: left;
+        + .dropdown{
+            margin-left: -1px;
+        }
     }
 }
-.dropdown-group.rounded>.dropdown .btn{
-    border-radius: 100px;
-}
 .dropdown-group.rounded>.dropdown:last-child:not(:first-child) .btn{
+    border-radius: 100px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 .dropdown-group.rounded>.dropdown:first-child:not(:last-child) .btn{
+    border-radius: 100px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }

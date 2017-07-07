@@ -1385,14 +1385,15 @@ a {
 /* line 1, ../sass/component/_dropdown.scss */
 .dropdown {
   position: relative;
+  display: inline-block;
 }
-/* line 4, ../sass/component/_dropdown.scss */
+/* line 5, ../sass/component/_dropdown.scss */
 .dropdown .dropdown-toggle i {
   font-size: 120%;
   padding-left: 5px;
   line-height: .6;
 }
-/* line 9, ../sass/component/_dropdown.scss */
+/* line 10, ../sass/component/_dropdown.scss */
 .dropdown .dropdown-toggle i:before {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -1405,7 +1406,7 @@ a {
   -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-/* line 17, ../sass/component/_dropdown.scss */
+/* line 18, ../sass/component/_dropdown.scss */
 .dropdown.open .dropdown-toggle i:before {
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -1413,15 +1414,15 @@ a {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 21, ../sass/component/_dropdown.scss */
+/* line 22, ../sass/component/_dropdown.scss */
 .dropdown.open .dropdown-menu {
   display: block;
 }
-/* line 27, ../sass/component/_dropdown.scss */
+/* line 28, ../sass/component/_dropdown.scss */
 .dropdown.closing .dropdown-menu {
   display: block;
 }
-/* line 32, ../sass/component/_dropdown.scss */
+/* line 33, ../sass/component/_dropdown.scss */
 .dropdown .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -1431,7 +1432,7 @@ a {
   float: left;
   min-width: 160px;
   padding: 5px 0;
-  margin: 2px 0 0;
+  margin: 1px 0 0;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -1454,26 +1455,32 @@ a {
 .dropdown .dropdown-menu > li > a:hover {
   background: #e6e6e6;
 }
+/* line 37, ../sass/helper/mixins/_dropdown.scss */
+.dropdown .dropdown-menu.right {
+  left: auto;
+  right: 0;
+}
 
-/* line 37, ../sass/component/_dropdown.scss */
+/* line 38, ../sass/component/_dropdown.scss */
 .dropdown-group .dropdown {
   display: inline-block;
   float: left;
 }
-
-/* line 42, ../sass/component/_dropdown.scss */
-.dropdown-group.rounded > .dropdown .btn {
-  border-radius: 100px;
+/* line 41, ../sass/component/_dropdown.scss */
+.dropdown-group .dropdown + .dropdown {
+  margin-left: -1px;
 }
 
-/* line 45, ../sass/component/_dropdown.scss */
+/* line 46, ../sass/component/_dropdown.scss */
 .dropdown-group.rounded > .dropdown:last-child:not(:first-child) .btn {
+  border-radius: 100px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-/* line 49, ../sass/component/_dropdown.scss */
+/* line 51, ../sass/component/_dropdown.scss */
 .dropdown-group.rounded > .dropdown:first-child:not(:last-child) .btn {
+  border-radius: 100px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
