@@ -39,7 +39,8 @@
 	
 	
 <div class="container">
-  <form>
+  <form class="form-meterial">
+	  
     <h1>Material Design Form Elements</h1>
 	  
     <div class="form-group">
@@ -51,7 +52,7 @@
     </div>
 	  
     <div class="form-group">
-      <input type="text" required="required"/>
+      <input type="text" class="form-control" required="required"/>
       <label class="control-label" for="input">Textfield</label><i class="bar"></i>
     </div>
 	  
@@ -71,6 +72,7 @@
         <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
       </label>
     </div>
+	  
     <div class="form-radio">
       <div class="radio">
         <label>
@@ -84,18 +86,87 @@
       </div>
     </div>
 	  
+	  <div class="form-radio">
+      <div class="radio inline-block">
+        <label>
+          <input type="radio" name="radio" checked="checked"/><i class="helper"></i>Inline Element
+        </label>
+      </div>
+      <div class="radio inline-block">
+        <label>
+          <input type="radio" name="radio"/><i class="helper"></i>Add '.inline-block' class
+        </label>
+      </div>
+    </div>
+	  
     <div class="checkbox">
       <label>
         <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
       </label>
     </div>
 	  
-	 
-	  
   </form>
-  <div class="button-container">
-    <button class="button" type="button"><span>Submit</span></button>
-  </div>
+	
+	
+	<form class="form-default">
+		
+		<div class="form-group">
+		 	<label>Textbox</label>
+		 	<input type="text" class="form-control" placeholder="Textbox">
+	  </div>
+		
+		<div class="checkbox">
+			<label>Textbox</label>
+			<label>
+				<input type="checkbox"> Check me out
+			</label>
+	   </div>
+		<textarea class="form-control" rows="3"></textarea>
+		
+		<div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div>
+<div class="checkbox disabled">
+  <label>
+    <input type="checkbox" value="" disabled>
+    Option two is disabled
+  </label>
+</div>
+
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div>
+<div class="radio disabled">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Option three is disabled
+  </label>
+</div>
+		<div class="form-group">
+			<select class="form-control">
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			<option>Option 4</option>
+			<option>Option 5</option>
+		</select>
+		</div>
+
+		
+	</form>
+
 </div>
 </body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
