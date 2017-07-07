@@ -10,9 +10,12 @@
 @import "helper/_mixins.scss";
 @import "helper/_reset.scss";
 @import "helper/_extend.scss";
+@import "helper/_animation.scss";
 
 /*****************************
 *****************************/
 
 @import "component/_global.scss";
+@import "component/_rounded.scss";
 @import "component/_button.scss";
+@import "component/_dropdown.scss";
