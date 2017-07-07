@@ -2,29 +2,33 @@
  * inspideez
  * dropdown
  */
-
 $(function () {
-    $('.dropdown-menu').hide;
-    $('.dropdown-toggle').on("click", function (event){
+    $('.dropdown-toggle').on("click", function (event) {
         event.stopPropagation();
+        //closing all other dropdown's and adding .closing for animating 
+        $('.dropdown.open').not($(this).parent('.dropdown')).removeClass('open').addClass('closing');
+        //removing .closing after timeout
+        setTimeout(function () {
+            $('.dropdown').removeClass('closing');
+        }, 250);
+        //toggle .open and .closing
         $(this).parent('.dropdown').toggleClass('open');
-        if($(this).parent('.dropdown').hasClass('open')){
-            $(this).parent('.dropdown').removeClass('closing');
-        }else{
+        if ($(this).parent('.dropdown').hasClass('open')) {
+        } else {
             $(this).parent('.dropdown').addClass('closing');
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.dropdown').removeClass('closing');
-            },150);
+            }, 250);
         }
         
     });
+    //outside click closing all dropdown's
     $('html,body').on("click", function () {
-            if($('.dropdown').hasClass('open')){
-                $('.dropdown').addClass('closing');
-            }
-            $('.dropdown').removeClass('open');
-            setTimeout(function(){
-                $('.dropdown').removeClass('closing');
-            },150);
+        $('.dropdown.open').addClass('closing');
+        setTimeout(function () {
+            $('.dropdown').removeClass('closing');
+        }, 250);
+        $('.dropdown').removeClass('open')
     });
+
 });
