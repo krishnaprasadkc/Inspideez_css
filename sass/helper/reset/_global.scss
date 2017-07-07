@@ -38,3 +38,7 @@ body {
 ol, ul {
 	list-style: none;
 }
+
+.row>[class^="col-"], .row>[class*=" col-"]{
+	@include box-sizing(border-box);
+}

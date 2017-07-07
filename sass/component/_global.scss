@@ -1,5 +1,5 @@
 body{
-	@include gradient-striped(rgba(0,0,0,.15), 45deg);
+	background: $clr-white;
 	@extend .font-family-default;
 	@extend .bg-default;
 	@extend .text-black;
