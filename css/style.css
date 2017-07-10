@@ -174,7 +174,7 @@ ol, ul {
 }
 
 /* line 7, ../sass/helper/_extend.scss */
-.margin-top-1x, .documentation {
+.margin-top-1x, .documentation, .documentation-left {
   margin-top: 15px;
 }
 
@@ -184,7 +184,7 @@ ol, ul {
 }
 
 /* line 13, ../sass/helper/_extend.scss */
-.margin-bottom-1x {
+.margin-bottom-1x, .documentation, .documentation-left {
   margin-bottom: 15px;
 }
 
@@ -646,6 +646,64 @@ ol, ul {
   }
 }
 /*.animation-fade-up-close*/
+/********************************************************
+********************************************************/
+/* line 3, ../sass/helper/_helper-classes.scss */
+.text-primary {
+  color: #337ab7;
+}
+
+/* line 6, ../sass/helper/_helper-classes.scss */
+.text-success {
+  color: #5cb85c;
+}
+
+/* line 9, ../sass/helper/_helper-classes.scss */
+.text-info {
+  color: #5bc0de;
+}
+
+/* line 12, ../sass/helper/_helper-classes.scss */
+.text-warning {
+  color: #f0ad4e;
+}
+
+/* line 15, ../sass/helper/_helper-classes.scss */
+.text-danger {
+  color: #d9534f;
+}
+
+/*******************/
+/* line 21, ../sass/helper/_helper-classes.scss */
+.bg-primary, code {
+  background: #337ab7;
+  padding: 15px;
+}
+
+/* line 25, ../sass/helper/_helper-classes.scss */
+.bg-success {
+  background: #5cb85c;
+  padding: 15px;
+}
+
+/* line 29, ../sass/helper/_helper-classes.scss */
+.bg-info {
+  background: #5bc0de;
+  padding: 15px;
+}
+
+/* line 33, ../sass/helper/_helper-classes.scss */
+.bg-warning {
+  background: #f0ad4e;
+  padding: 15px;
+}
+
+/* line 37, ../sass/helper/_helper-classes.scss */
+.bg-danger {
+  background: #d9534f;
+  padding: 15px;
+}
+
 /*****************************
 *****************************/
 /* line 1, ../sass/component/_global.scss */
@@ -662,6 +720,11 @@ hr {
 /* line 19, ../sass/component/_global.scss */
 a {
   text-decoration: none;
+}
+
+/* line 22, ../sass/component/_global.scss */
+p {
+  margin-bottom: 15px;
 }
 
 /*for border radius*/
@@ -3020,5 +3083,12 @@ a {
   padding: 15px;
   border: solid 1px #e6e5e5;
   background: #eeeeee;
+  border-radius: 3px;
+}
+
+/* line 9, ../sass/component/_documentation.scss */
+.documentation-left {
+  padding: 15px;
+  border: solid 1px #e6e5e5;
   border-radius: 3px;
 }

@@ -1,0 +1,42 @@
+/********************************************************
+********************************************************/
+.text-primary{
+    color: $brand-primary;
+}
+.text-success{
+    color: $brand-success;
+}
+.text-info{
+    color: $brand-info;
+}
+.text-warning{
+    color: $brand-warning;
+}
+.text-danger{
+    color: $brand-danger;
+}
+
+/*******************/
+
+.bg-primary{
+    background: $brand-primary;
+    padding: $padding-default;
+}
+.bg-success{
+    background: $brand-success;
+    padding: $padding-default;
+}
+.bg-info{
+    background: $brand-info;
+    padding: $padding-default;
+}
+.bg-warning{
+    background: $brand-warning;
+    padding: $padding-default;
+}
+.bg-danger{
+    background: $brand-danger;
+    padding: $padding-default;
+}
+
+
