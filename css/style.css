@@ -712,6 +712,47 @@ ol, ul {
   margin-right: auto;
 }
 
+/*******************/
+/* line 52, ../sass/helper/_helper-classes.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 55, ../sass/helper/_helper-classes.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 58, ../sass/helper/_helper-classes.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 61, ../sass/helper/_helper-classes.scss */
+.text-justify {
+  text-align: justify;
+}
+
+/* line 64, ../sass/helper/_helper-classes.scss */
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* line 67, ../sass/helper/_helper-classes.scss */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* line 70, ../sass/helper/_helper-classes.scss */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* line 73, ../sass/helper/_helper-classes.scss */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
 /*****************************
 *****************************/
 /* line 1, ../sass/component/_global.scss */
