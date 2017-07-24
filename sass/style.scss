@@ -7,8 +7,8 @@
 ********************************************************************************************************************************/
 
 @import "helper/_variables.scss";
-@import "helper/_mixins.scss";
-@import "helper/_reset.scss";
+//@import "helper/_mixins.scss";
+//@import "helper/_reset.scss";
 @import "helper/_extend.scss";
 @import "helper/_animation.scss";
 @import "helper/_helper-classes.scss";
@@ -22,5 +22,6 @@
 @import "component/_dropdown.scss";
 @import "component/_grid.scss";
 @import "component/_form.scss";
+@import "component/_navbar.scss";
 
 @import "component/_documentation.scss";
